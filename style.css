@@ -1,0 +1,1034 @@
+/* --- AUTH PAGES (Login & Register) --- */
+.auth-body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('3.png'); 
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.auth-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    border-radius: 20px;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.auth-card h1 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.auth-logo {
+    width: 70px;
+    height: 70px;
+    background-color: #1e6091;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto 16px;
+    border: 3px solid #fff;
+}
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.auth-group {
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.auth-group label {
+    font-size: 12px;
+    color: #475569;
+    font-weight: 600;
+}
+
+.auth-group input, .auth-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    margin-top: 4px;
+    outline: none;
+}
+
+.auth-btn {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.auth-links {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #334155;
+}
+
+.auth-links a {
+    color: #1e6091;
+    text-decoration: underline;
+    font-weight: 600;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #1e293b;
+}
+
+/* Top Navigation Bar */
+.topbar {
+    background-color: #1e6091;
+    color: white;
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-logo {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.search-bar {
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    padding: 8px 18px;
+    width: 340px;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    color: #f1f5f9;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+}
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.logout-link {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Left Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #e2e8f0;
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    padding-top: 16px;
+    border-right: 1px solid #cbd5e1;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    color: #334155;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-left: 4px solid transparent;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #cbd5e1;
+    color: #0f172a;
+    font-weight: 600;
+    border-left: 4px solid #1e6091;
+}
+
+/* Main Layout */
+.main-wrapper {
+    margin-left: 220px;
+    margin-top: 64px;
+    padding: 24px 32px;
+}
+
+.page-header h1 {
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.page-header p {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard 2-Column Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.panel-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1e293b;
+}
+
+/* Course Progress Cards */
+.courses-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.course-box {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #f8fafc;
+}
+
+.course-box h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #1e6091;
+    border-radius: 6px;
+}
+
+.next-activity {
+    font-size: 12px;
+    color: #334155;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: #f1f5f9;
+}
+
+.next-activity.urgent {
+    background-color: #fde68a;
+    color: #92400e;
+    font-weight: 500;
+}
+
+/* Recent Activity Stream */
+.activity-list {
+    border-left: 2px solid #cbd5e1;
+    margin-left: 14px;
+    padding-left: 20px;
+}
+
+.activity-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.activity-dot {
+    width: 24px;
+    height: 24px;
+    background-color: #1e6091;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -33px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.activity-item p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.activity-item span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Instant Notifications Panel */
+.notif-title {
+    color: #2b6cb0;
+    font-size: 19px;
+    margin-bottom: 16px;
+}
+
+.notif-card {
+    background-color: #e6f0fa;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.notif-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.badge-blue { background-color: #2563eb; }
+.badge-red { background-color: #dc2626; }
+.badge-green { background-color: #16a34a; }
+
+.notif-content h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.notif-content p {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.notif-link {
+    font-size: 12px;
+    color: #1e6091;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.notif-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+
+/* --- SUBJECTS PAGE (Image 2) --- */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.subj-card {
+    border-radius: 28px;
+    padding: 26px 24px;
+    text-align: center;
+    color: #0f172a;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.subj-card h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.subj-card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.instructor-pill {
+    background-color: rgba(148, 163, 184, 0.45);
+    padding: 6px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 14px;
+    width: 80%;
+}
+
+.enter-btn {
+    display: inline-block;
+    background-color: rgba(51, 65, 85, 0.35);
+    color: #0f172a;
+    padding: 6px 20px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enter-btn:hover {
+    background-color: rgba(15, 23, 42, 0.25);
+}
+
+/* Subject Card Themes */
+.theme-blue { background-color: #2b6cb0; }
+.theme-green { background-color: #bef264; }
+.theme-purple { background-color: #e9d5ff; }
+.theme-red { background-color: #fb7185; }
+.theme-lightblue { background-color: #dbeafe; }
+.theme-gradient { background: linear-gradient(90deg, #f87171, #a855f7); }
+
+/* --- ACTIVITY FEED PAGE (Image 3) --- */
+.feed-banner {
+    background-color: #2563eb;
+    color: #0f172a;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 18px 28px;
+    border-radius: 35px;
+    margin-bottom: 14px;
+}
+
+.feed-pill {
+    background-color: #e2e8f0;
+    padding: 14px 28px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.feed-pill span.percent {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.feed-notif-box {
+    background-color: #dbeafe;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.feed-notif-box h4 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.feed-notif-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+}
+
+
+/* --- LIVE SESSIONS PAGE (Image 4) --- */
+.session-pill {
+    background-color: #e2e8f0;
+    border-radius: 35px;
+    padding: 22px 32px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.session-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.session-info p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 4px;
+}
+
+.session-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.cam-icon {
+    width: 44px;
+    height: 32px;
+    border: 3px solid #64748b;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #64748b;
+}
+
+.schedule-link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: underline;
+}
+
+/* --- SETTINGS PAGE (Image 5) --- */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-bottom: 32px;
+    padding: 12px 20px;
+}
+
+.profile-big-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    font-weight: 800;
+    color: #0f172a;
+    flex-shrink: 0;
+}
+
+.profile-details {
+    text-align: center;
+    flex: 1;
+}
+
+.profile-details h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.profile-details p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.profile-details .block-text {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0 16px;
+}
+
+.edit-profile-btn {
+    background-color: #5b7c87;
+    color: #0f172a;
+    border: none;
+    padding: 10px 64px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    background-color: #476570;
+    color: white;
+}
+
+.settings-bar {
+    background-color: #e2e8f0;
+    padding: 18px 28px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.settings-bar:hover {
+    background-color: #cbd5e1;
+}
+
+.edit-form-box {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    display: none;
+}
+
+.edit-form-box input {
+    width: 100%;
+    padding: 10px 14px;
+    margin: 6px 0 14px;
+    border: 1px solid #94a3b8;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* --- ADMIN MODULE STYLES --- */
+.admin-top-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.admin-light-card {
+    background-color: #cfe2ff;
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.admin-light-card h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.admin-light-card .big-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 8px;
+}
+
+.admin-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+}
+
+.course-list-big {
+    list-style: none;
+    margin-top: 16px;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+.faculty-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Courses Offer Page */
+.course-banner {
+    background-color: #2b70c9;
+    color: #0f172a;
+    border-radius: 22px;
+    padding: 22px 30px;
+    margin-bottom: 18px;
+}
+
+.course-banner h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.course-banner p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Enrolled Students / Blocks Page */
+.block-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.block-tab {
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #0f172a;
+    background-color: #f1f5f9;
+}
+
+.block-tab.active, .block-tab:hover {
+    background-color: #cbd5e1;
+}
+
+.gender-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.gender-header-pill {
+    background-color: #2b70c9;
+    color: #0f172a;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 24px;
+    width: 70%;
+    margin: 0 auto 14px;
+}
+
+.student-list-box {
+    background-color: #d9d9d9;
+    border-radius: 24px;
+    padding: 24px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.6;
+    min-height: 360px;
+}
+
+/* Rooms / Schedule Grid */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.room-card {
+    background-color: #2b70c9;
+    border-radius: 24px;
+    padding: 20px 22px;
+    color: #0f172a;
+}
+
+.room-card h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.room-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.room-slot {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.room-slot span {
+    display: block;
+    text-align: right;
+    font-weight: 800;
+}
+
+/* Faculty Members Page */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.faculty-dept-card {
+    background-color: #2b70c9;
+    border-radius: 32px;
+    padding: 24px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dept-pill {
+    background-color: #cbd5e1;
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
+
+.faculty-names-list {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.faculty-add-btn {
+    background-color: #cbd5e1;
+    color: #0f172a;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    width: 65%;
+    margin: 0 auto;
+}
+
+/* Admin Settings Page */
+.admin-settings-center {
+    text-align: center;
+    padding: 20px;
+}
+
+.admin-big-icon {
+    width: 180px;
+    height: 180px;
+    border: 8px solid #0f172a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    margin: 0 auto 12px;
+}
+
+.admin-action-pill {
+    display: block;
+    width: 75%;
+    margin: 16px auto;
+    background-color: #2b70c9;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 800;
+    padding: 12px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* --- TEACHER MODULE STYLES --- */
+.teacher-grid-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.teacher-card-box {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.t-subject-row {
+    background-color: #1e6091;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.student-approval-row {
+    background-color: #1e6091;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-accept {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.activity-status-row {
+    background-color: #1e6091;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.badge-working {
+    background-color: #84cc16;
+    color: #0f172a;
+    padding: 6px 24px;
+    border-radius: 16px;
+    font-weight: 800;
+}
+
+.badge-not-working {
+    background-color: #ef4444;
+    color: white;
+    padding: 6px 24px;
+    border-radius: 16px;
+    font-weight: 800;
+}
+
+.block-item-card {
+    background-color: #1e6091;
+    color: white;
+    padding: 22px 28px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload-link-text {
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
